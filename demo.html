@@ -62,12 +62,9 @@
             img_i1.setAttribute("id", "img_pat");
             div_d.appendChild(img_i1)
 
-
             let name_n = document.createElement('h3')
             name_n.innerHTML = arr[i].name;
             div_d.appendChild(name_n)
-
-
 
             let details_d = document.createElement('p')
             details_d.innerHTML = arr[i].details;
@@ -79,6 +76,29 @@
             price_p.innerHTML = arr[i].price;
             div_d.appendChild(price_p)
         }
+
+        // 添加
+        var tbody = document.querySelector('tbody');
+        for (let i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            for (var k in datas[i]) {
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+
+            }
+            var td = document.createElement('td');
+            td.innerHTML = '<a href="javsScript:;" >删除</a>';
+            tr.appendChild(td);
+        }
+        var as = document.querySelectorAll('a');
+        for (let i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode)
+            }
+        }
+            // ..........
     </script>
 </body>
 <style>

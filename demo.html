@@ -17,10 +17,6 @@
                 <p id="details">details</p>
                 <h2 id="age">age</h2>
                 <span id="price">price</span>
-            //....................
-              <p id="details">details</p>
-                <h2 id="age">age</h2>
-                <span id="price">price</span>
         </div>
     </article>
 
@@ -82,6 +78,7 @@
         }
 
         // 添加
+        var tbody = document.querySelector('tbody');
         var tbody = document.querySelector('tbody');
         for (let i = 0; i < datas.length; i++) {
             var tr = document.createElement('tr');

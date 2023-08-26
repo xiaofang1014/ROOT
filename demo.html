@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <article>
+        <div id="list" class="list">
+            <img src="./images/apple.png" id="img_path" alt="">
+            <img1 src="https://img01.jituwang.com/170502/256969-1F50220552481.jpg" alt="">
+                <h3 id="names">name</h3>
+                <p id="details">details</p>
+                <h2 id="age">age</h2>
+                <span id="price">price</span>
+        </div>
+    </article>
+
+    <script>
+        const arr = [
+            {
+                img: src = "https://img01.jituwang.com/170502/256969-1F50220552481.jpg",
+                img1: src = "https://img01.jituwang.com/170502/256969-1F50220552481.jpg",
+                name: "张三",
+                details: "帅气逼人",
+                age: 18,
+                price: 12
+            },
+            {
+                img: src = "https://www.hongwu.com/wp-content/uploads/2022/03/c26d0846f09847348cd132ede25e767c.jpg",
+                img1: src = "https://img01.jituwang.com/170502/256969-1F50220552481.jpg",
+                name: "李四",
+                details: "英俊潇洒",
+                age: 20,
+                price: 13
+            },
+            {
+                img: src = "https://n.sinaimg.cn/sinacn00/368/w1024h944/20180706/dd24-hexfcvk1853439.jpg",
+                img1: src = "https://img01.jituwang.com/170502/256969-1F50220552481.jpg",
+                name: "王五",
+                details: "英俊潇洒",
+                age: 22,
+                price: 14
+            }
+        ]
+        const article = document.querySelector('article')
+        for (let i = 0; i < arr.length; i++) {
+            let div_d = document.createElement('div')
+            article.appendChild(div_d)
+
+            let img_i = document.createElement('img')
+            img_i.setAttribute("src", arr[i].img)
+            img_i.setAttribute("id", "img_path");
+            div_d.appendChild(img_i)
+
+            let img_i1 = document.createElement('img')
+            img_i1.setAttribute("src", arr[i].img1)
+            img_i1.setAttribute("id", "img_pat");
+            div_d.appendChild(img_i1)
+
+
+            let name_n = document.createElement('h3')
+            name_n.innerHTML = arr[i].name;
+            div_d.appendChild(name_n)
+
+
+
+            let details_d = document.createElement('p')
+            details_d.innerHTML = arr[i].details;
+            div_d.appendChild(details_d)
+            let age_a = document.createElement('h2')
+            age_a.innerHTML = arr[i].age;
+            div_d.appendChild(age_a)
+            let price_p = document.createElement('span')
+            price_p.innerHTML = arr[i].price;
+            div_d.appendChild(price_p)
+        }
+    </script>
+</body>
+<style>
+    article {
+
+        top: 50px;
+        left: 163.5px;
+        width: 1200px;
+        height: 800px;
+        background-color: rgb(22, 131, 234);
+    }
+
+    article>div {
+        float: left;
+        width: 230px;
+        height: 292px;
+        background-color: pink;
+        margin-bottom: 2px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    /* article>div>img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 160px;
+        height: 160px;
+    } */
+
+
+    article>div>#img_path {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 160px;
+        height: 160px;
+    }
+
+    article>div>#img_pat {
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 16px;
+        height: 16px;
+        z-index: 999;
+    }
+
+    article>div>#names {
+        color: red;
+        margin-top: 5px;
+        margin-left: 29px;
+    }
+
+    article>div>p {
+        color: rgb(129, 135, 128);
+        margin-top: -18px;
+        margin-left: 29px;
+    }
+
+    article>div>h2 {
+        color: rgb(46, 205, 73);
+        margin-top: -8px;
+        margin-left: 29px;
+    }
+
+    article>div>span {
+        color: #1927c2;
+        position: absolute;
+        margin-left: 179px;
+        margin-top: -43px;
+        ;
+    }
+</style>
+
+</html>
